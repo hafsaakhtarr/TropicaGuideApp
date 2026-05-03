@@ -36,7 +36,25 @@ class _ChecklistScreenState extends State<ChecklistScreen> {
 
     return Scaffold(
       backgroundColor: TColors.bg,
-      bottomNavigationBar: TBottomNav(currentIndex: 2, onTap: (_) {}),
+      bottomNavigationBar: TBottomNav(
+        currentIndex: 2,
+        onTap: (index) {
+          switch (index) {
+            case 0:
+              Navigator.pushNamed(context, '/packing');
+              break;
+            case 1:
+              Navigator.pushNamed(context, '/optimizer');
+              break;
+            case 2:
+              // Already on checklist
+              break;
+            case 3:
+              // Profile
+              break;
+          }
+        },
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: TColors.lime,

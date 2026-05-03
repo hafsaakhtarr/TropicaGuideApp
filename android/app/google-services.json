@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "917848612255",
+    "project_id": "tropica-183da",
+    "storage_bucket": "tropica-183da.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917848612255:android:f65e404588bbc481f1f1aa",
+        "android_client_info": {
+          "package_name": "com.example.tropica_guide_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcXUfpxTpmRxWblKe0G-Ogo3_uUDwBfOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917848612255:android:c3518c7affb35fd9f1f1aa",
+        "android_client_info": {
+          "package_name": "com.example.tropicaguide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcXUfpxTpmRxWblKe0G-Ogo3_uUDwBfOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917848612255:android:db93d8f3e3407c7ef1f1aa",
+        "android_client_info": {
+          "package_name": "com.example.tropicaguideapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcXUfpxTpmRxWblKe0G-Ogo3_uUDwBfOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -60,7 +60,25 @@ class _OptimizerScreenState extends State<OptimizerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: TColors.bg,
-      bottomNavigationBar: TBottomNav(currentIndex: 1, onTap: (_) {}),
+      bottomNavigationBar: TBottomNav(
+        currentIndex: 1,
+        onTap: (index) {
+          switch (index) {
+            case 0:
+              Navigator.pushNamed(context, '/packing');
+              break;
+            case 1:
+              // Already on optimizer
+              break;
+            case 2:
+              Navigator.pushNamed(context, '/checklist');
+              break;
+            case 3:
+              // Profile
+              break;
+          }
+        },
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20),

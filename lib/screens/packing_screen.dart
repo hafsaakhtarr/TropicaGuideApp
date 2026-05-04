@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
-import '../widgets/bottom_nav.dart';
 
 class PackingScreen extends StatefulWidget {
   const PackingScreen({super.key});
@@ -22,26 +21,6 @@ class _PackingScreenState extends State<PackingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: TColors.bg,
-      bottomNavigationBar: TBottomNav(
-        currentIndex: 0,
-        onTap: (index) {
-          // Handle navigation
-          switch (index) {
-            case 0:
-              // Already on packing
-              break;
-            case 1:
-              Navigator.pushNamed(context, '/optimizer');
-              break;
-            case 2:
-              Navigator.pushNamed(context, '/checklist');
-              break;
-            case 3:
-              // Profile or something
-              break;
-          }
-        },
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20),

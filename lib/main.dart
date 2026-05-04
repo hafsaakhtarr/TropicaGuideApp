@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'theme/app_theme.dart';
 import 'screens/packing_screen.dart';
 import 'screens/optimizer_screen.dart';
 import 'screens/checklist_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const TropicaGuideApp());
 }
 
@@ -52,7 +60,8 @@ class _MainShellState extends State<MainShell> {
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
           color: TColors.surface,
-          border: Border(top: BorderSide(color: TColors.border, width: 0.5)),
+          border: Border(
+              top: BorderSide(color: TColors.border, width: 0.5)),
         ),
         child: SafeArea(
           top: false,
@@ -122,7 +131,8 @@ class _NavItem extends StatelessWidget {
             style: TextStyle(
               fontFamily: 'Nunito',
               fontSize: 10,
-              fontWeight: active ? FontWeight.w700 : FontWeight.w500,
+              fontWeight:
+                  active ? FontWeight.w700 : FontWeight.w500,
               color: active ? TColors.lime : TColors.textMuted,
             ),
           ),
@@ -131,7 +141,8 @@ class _NavItem extends StatelessWidget {
             Container(
               width: 5, height: 5,
               decoration: const BoxDecoration(
-                color: TColors.lime, shape: BoxShape.circle,
+                color: TColors.lime,
+                shape: BoxShape.circle,
               ),
             )
           else

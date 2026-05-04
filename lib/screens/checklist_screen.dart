@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
-import '../widgets/bottom_nav.dart';
 
 class ChecklistScreen extends StatefulWidget {
   const ChecklistScreen({super.key});
@@ -36,25 +35,6 @@ class _ChecklistScreenState extends State<ChecklistScreen> {
 
     return Scaffold(
       backgroundColor: TColors.bg,
-      bottomNavigationBar: TBottomNav(
-        currentIndex: 2,
-        onTap: (index) {
-          switch (index) {
-            case 0:
-              Navigator.pushNamed(context, '/packing');
-              break;
-            case 1:
-              Navigator.pushNamed(context, '/optimizer');
-              break;
-            case 2:
-              // Already on checklist
-              break;
-            case 3:
-              // Profile
-              break;
-          }
-        },
-      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: TColors.lime,
@@ -124,7 +104,7 @@ class _ChecklistScreenState extends State<ChecklistScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          '${_done} of $_total tasks done',
+                          '$_done of $_total tasks done',
                           style: TText.h2,
                         ),
                         const SizedBox(height: 3),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
-import '../widgets/bottom_nav.dart';
 
 class OptimizerScreen extends StatefulWidget {
   const OptimizerScreen({super.key});
@@ -60,25 +59,6 @@ class _OptimizerScreenState extends State<OptimizerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: TColors.bg,
-      bottomNavigationBar: TBottomNav(
-        currentIndex: 1,
-        onTap: (index) {
-          switch (index) {
-            case 0:
-              Navigator.pushNamed(context, '/packing');
-              break;
-            case 1:
-              // Already on optimizer
-              break;
-            case 2:
-              Navigator.pushNamed(context, '/checklist');
-              break;
-            case 3:
-              // Profile
-              break;
-          }
-        },
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20),
@@ -195,7 +175,7 @@ class _SliderRow extends StatelessWidget {
             activeTrackColor: TColors.lime,
             inactiveTrackColor: TColors.border,
             thumbColor: TColors.lime,
-            overlayColor: TColors.lime.withOpacity(0.1),
+            overlayColor: TColors.lime.withValues(alpha: 0.1),
             trackHeight: 3,
             thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 7),
             overlayShape: const RoundSliderOverlayShape(overlayRadius: 14),
@@ -227,11 +207,11 @@ class _ActivityRankCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
       decoration: BoxDecoration(
         color: isTop
-            ? TColors.lime.withOpacity(0.08)
+            ? TColors.lime.withValues(alpha: 0.08)
             : TColors.surface,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: isTop ? TColors.lime.withOpacity(0.3) : TColors.border,
+          color: isTop ? TColors.lime.withValues(alpha: 0.3) : TColors.border,
           width: 0.8,
         ),
       ),
@@ -243,7 +223,7 @@ class _ActivityRankCard extends StatelessWidget {
             height: 28,
             decoration: BoxDecoration(
               color: isTop
-                  ? TColors.lime.withOpacity(0.2)
+                  ? TColors.lime.withValues(alpha: 0.2)
                   : TColors.surface2,
               borderRadius: BorderRadius.circular(8),
             ),
@@ -280,13 +260,13 @@ class _ActivityRankCard extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
                 color: moveUp
-                    ? TColors.lime.withOpacity(0.12)
-                    : TColors.coral.withOpacity(0.12),
+                    ? TColors.lime.withValues(alpha: 0.12)
+                    : TColors.coral.withValues(alpha: 0.12),
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(
                   color: moveUp
-                      ? TColors.lime.withOpacity(0.3)
-                      : TColors.coral.withOpacity(0.3),
+                      ? TColors.lime.withValues(alpha: 0.3)
+                      : TColors.coral.withValues(alpha: 0.3),
                 ),
               ),
               child: Text(
